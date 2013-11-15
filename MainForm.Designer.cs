@@ -70,7 +70,6 @@ namespace OEC.Example
             this.oecClient1.EventBatchInterval = 0;
             this.oecClient1.PriceHost = "";
             this.oecClient1.RemoteHostingEnabled = false;
-            this.oecClient1.OnBarsReceived += new OEC.API.OnBarsReceivedEvent(this.oecClient1_OnBarsReceived);
             this.oecClient1.OnLoginFailed += new OEC.API.OnLoginFailedEvent(this.oecClient1_OnLoginFailed);
             this.oecClient1.OnAccountSummaryChanged += new OEC.API.OnAccountSummaryChangedEvent(this.oecClient1_OnAccountSummaryChanged);
             this.oecClient1.OnSymbolLookupReceived += new OEC.API.OnSymbolLookupEvent(this.oecClient1_OnSymbolLookupReceived);
@@ -84,7 +83,6 @@ namespace OEC.Example
             this.oecClient1.OnCommandUpdated += new OEC.API.OnCommandUpdatedEvent(this.oecClient1_OnCommandUpdated);
             this.oecClient1.OnDisconnected += new OEC.API.OnDisconnectedEvent(this.oecClient1_OnDisconnected);
             this.oecClient1.OnOrderStateChanged += new OEC.API.OnOrderStateChangedEvent(this.oecClient1_OnOrderStateChanged);
-            this.oecClient1.OnTicksReceived += new OEC.API.OnTicksReceivedEvent(this.oecClient1_OnTicksReceived);
             // 
             // splitContainer1
             // 

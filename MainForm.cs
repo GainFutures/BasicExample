@@ -42,9 +42,7 @@ namespace OEC.Example
                 if (bc.IsFuture)
                     oecClient1.RequestContracts(bc);
 
-            string[] equities = {"MSFT", "GOOG", "IBM", "OXPS", "AAPL", "SPY", "C"};
-            foreach (string eq in equities)
-                oecClient1.SymbolLookup(eq);
+            oecClient1.SymbolLookup(new SymbolLookupCriteria { SearchText = "ES", Mode = SymbolLookupMode.SymbolStartsWith, DesiredResultCount = 10}); // 10 contracts that starts with ES
         }
 
         /// <summary>
@@ -310,17 +308,7 @@ namespace OEC.Example
         {
             InitTicket();
         }
-
-        private void oecClient1_OnTicksReceived(Subscription subscription, Ticks ticks)
-        {
-            Console.WriteLine("{0} : {1} ticks", subscription.Contract, ticks.Prices.Length);
-        }
-
-        private void oecClient1_OnBarsReceived(Subscription subscription, Bar[] bars)
-        {
-            Console.WriteLine("{0} : {1} Bars", subscription.Contract, bars.Length);
-        }
-
+ 
         private void oecClient1_OnSymbolLookupReceived(SymbolLookupCriteria symbolLookup, ContractList contracts)
         {
             Console.WriteLine("OnSymbolLookupReceived: {0} : {1} contracts", symbolLookup.SearchText, contracts.Count);
