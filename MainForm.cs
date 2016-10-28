@@ -67,7 +67,7 @@ namespace OEC.Example
             try
             {
                 oecClient1.UUID = "9e61a8bc-0a31-4542-ad85-33ebab0e4e86";
-                oecClient1.Connect("api.openecry.com", 9200, tbLogin.Text, tbPassword.Text, false);
+                oecClient1.Connect("api.gainfutures.com", 9200, tbLogin.Text, tbPassword.Text, false);
                 UpdateStatus("OEC Server found");
             }
             catch (Exception ex)

@@ -1,7 +1,7 @@
 OEC API Example
 
 Note - in order to run this program, you need to obtain a valid username and password for 
-OEC simulation server (api.openecry.com).
+OEC simulation server (api.gainfutures.com).
 
 This program demostrates basic principles of operation of OEC API. A single form contains the 
 OECClient component instance with some event handlers hooked to it, and GUI views. The form is 
